@@ -10,20 +10,20 @@ import random
 k = int(input(" input k "))
 
 list = []
-for i in range(1,k+2):
+for i in range(1,k+1):
     x = round(random.randint(1,100))
     list.append(x)
 
 print(list)
 
 result_str = ""
+while k > 0:
+    for i in range(len(list)):
+     
+        result_str += f" {list[i]} * x^{k} + "
+        k-=1    
 
-for i in range(0,len(list)+1):
-    
-    while k > 0:
-        result_str = f" {list[i]} * x^{k} + "
-        k -=1    
-
-print(result_str)       
+   
+print(f"{result_str[:-17]} + {random.randint(1,100)} ")       
 
 
